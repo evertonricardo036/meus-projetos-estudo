@@ -14,10 +14,25 @@
   //return 'JUMPING';
 //}
 
-function makeAbbr(words) {
-  return words
-  .split(' ')
-  .map(word => word[0])
-  .join('')
-  .toUpperCase();
+//function makeAbbr(words) {
+  //return words
+  //.split(' ')
+ // .map(word => word[0])
+ // .join('')
+  //.toUpperCase();
+//}
+
+function scrollingText(word) {
+ const result = [];
+  let current = word;
+
+  for (let i = 0; i < word.length; i++) {
+    result.push(current.toUpperCase());
+
+    const firstChar = current[0];
+
+    current = current.slice(1) + firstChar;
+  }
+
+  return result;
 }
