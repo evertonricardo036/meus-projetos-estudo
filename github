@@ -1,0 +1,15 @@
+function isJumping(n) {
+const str = n.toString();
+  if (str.length === 1) {
+    return 'JUMPING';
+  }
+  for (let i = 0; i < str.length - 1; i++) {
+    const current = Number(str[i]);
+    const next = Number(str[i + 1]);
+
+    if (Math.abs(current - next) !== 1) {
+      return 'NOT JUMPING';
+    }
+  }
+  return 'JUMPING';
+}
