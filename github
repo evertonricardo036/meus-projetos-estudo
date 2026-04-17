@@ -22,16 +22,26 @@
   //.toUpperCase();
 //}
 
-function scrollingText(word) {
- const result = [];
-  let current = word;
+//function scrollingText(word) {
+ //const result = [];
+  //let current = word;
 
-  for (let i = 0; i < word.length; i++) {
-    result.push(current.toUpperCase());
+ //for (let i = 0; i < word.length; i++) {
+    //result.push(current.toUpperCase());
 
-    const firstChar = current[0];
+   // const firstChar = current[0];
 
-    current = current.slice(1) + firstChar;
+   // current = current.slice(1) + firstChar;
+  //}//
+
+  //return result;
+//}
+
+function factorial (n) {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
   }
 
   return result;
