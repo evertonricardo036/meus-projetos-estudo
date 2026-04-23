@@ -1,0 +1,73 @@
+//function isJumping(n) {
+//const str = n.toString();
+  //if (str.length === 1) {
+    //return 'JUMPING';
+  //}
+  //for (let i = 0; i < str.length - 1; i++) {
+    //const current = Number(str[i]);
+    //const next = Number(str[i + 1]);
+
+    //if (Math.abs(current - next) !== 1) {
+      //return 'NOT JUMPING';
+    //}
+ // }
+  //return 'JUMPING';
+//}
+
+//function makeAbbr(words) {
+  //return words
+  //.split(' ')
+ // .map(word => word[0])
+ // .join('')
+  //.toUpperCase();
+//}
+
+//function scrollingText(word) {
+ //const result = [];
+  //let current = word;
+
+ //for (let i = 0; i < word.length; i++) {
+    //result.push(current.toUpperCase());
+
+   // const firstChar = current[0];
+
+   // current = current.slice(1) + firstChar;
+  //}//
+
+  //return result;
+//}
+
+//function factorial (n) {
+  //let result = 1;
+
+  //for (let i = 1; i <= n; i++) {
+   // result *= i;
+ // }
+
+  //return result;
+//}
+
+//console.log(factorial(5));
+
+function getTriathlonDistance(distance) {
+const swimEnd = 3.86;
+const bikeEnd = 184.11;
+const runEnd = 226.31;
+
+if (distance === 0) {
+  return "Starting Line... Good Luck!";
+}  
+if (distance < swimEnd) {
+  const remaining = (226.31 - distance).toFixed(2);
+  return {  swim: `${remaining} to go!`};
+}  
+if ( distance < bikeEnd) {
+  const remaining = (226.31 - distance).toFixed(2);
+  return {bike: `${remaining} to go!` };
+}  
+if (distance < runEnd) {
+  const remaining = (226.31 - distance).toFixed(2);
+  return { run: `${remaining} to go!` };
+}  
+ return "You're done! Stop running!"; 
+}
